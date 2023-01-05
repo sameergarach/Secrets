@@ -86,7 +86,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.APP_ID,
     clientSecret: process.env.APP_SECRET,
-    callbackURL: "https://afternoon-journey-74873.herokuapp.com//auth/facebook/secrets"
+    callbackURL: "https://afternoon-journey-74873.herokuapp.com/auth/facebook/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({
