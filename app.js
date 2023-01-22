@@ -71,7 +71,7 @@ passport.deserializeUser(function(user, cb) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://afternoon-journey-74873.herokuapp.com/auth/google/secrets",
+    callbackURL: "https://glacial-gorge-27584.herokuapp.com/auth/google/secrets",
     passReqToCallback: true
   },
   function(request, accessToken, refreshToken, profile, done) {
@@ -86,7 +86,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.APP_ID,
     clientSecret: process.env.APP_SECRET,
-    callbackURL: "https://afternoon-journey-74873.herokuapp.com/auth/facebook/secrets"
+    callbackURL: "https://glacial-gorge-27584.herokuapp.com/auth/facebook/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({
